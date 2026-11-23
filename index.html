@@ -198,6 +198,62 @@
     .sponsors-cta .btn{min-width:230px;justify-content:center}
     @media(max-width:720px){.sponsors-section{padding:72px 0}.sponsors-silver-grid{grid-template-columns:1fr}.sponsor-card.gold-card{min-height:180px}.sponsor-card.silver-card{min-height:150px}.sponsor-card.gold-card img{max-width:340px;max-height:105px}}
 
+
+    /* ===== RESULTADOS 2026 (sección añadida) ===== */
+    .results{position:relative;overflow:hidden;padding:110px 0 100px;background:radial-gradient(1200px 500px at 85% -10%,rgba(23,162,184,.28),transparent 60%),radial-gradient(900px 500px at -10% 110%,rgba(232,70,45,.22),transparent 60%),linear-gradient(160deg,var(--deep),var(--navy) 55%,var(--ink));color:#fff}
+    .results::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:46px 46px;mask-image:linear-gradient(180deg,#000,transparent 85%);pointer-events:none}
+    .results .shell{position:relative}
+    .r-head{text-align:center;max-width:900px;margin:0 auto 46px}
+    .r-status{display:inline-flex;align-items:center;gap:10px;padding:8px 16px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);font-size:13px;font-weight:900;letter-spacing:.14em;text-transform:uppercase;margin-bottom:22px}
+    .r-status .r-dot{width:10px;height:10px;border-radius:50%;background:var(--green);box-shadow:0 0 0 0 rgba(76,175,80,.7);animation:rPulse 1.8s infinite}
+    .r-status .r-old{text-decoration:line-through;opacity:.55;color:#FFB4A8}
+    .r-head h2{font-family:var(--head);font-size:clamp(38px,6vw,72px);line-height:1.02;letter-spacing:-.03em;margin:0 0 18px;color:#fff}
+    .r-head h2 .r-grad{background:linear-gradient(90deg,var(--yellow),var(--orange),var(--red));-webkit-background-clip:text;background-clip:text;color:transparent}
+    .r-head p{font-size:20px;color:#D7E4FF;margin:0}
+    .r-progress{max-width:980px;margin:0 auto 64px}
+    .r-track{position:relative;height:14px;border-radius:999px;background:rgba(255,255,255,.12);overflow:visible}
+    .r-fill{position:absolute;inset:0 auto 0 0;width:0;border-radius:999px;background:linear-gradient(90deg,var(--red),var(--orange),var(--yellow),var(--green),var(--teal));box-shadow:0 0 24px rgba(23,162,184,.55);transition:width 2.6s cubic-bezier(.2,.8,.2,1)}
+    .r-progress.go .r-fill{width:100%}
+    .r-marks{position:relative;height:46px;margin-top:10px}
+    .r-mark{position:absolute;transform:translateX(-50%);text-align:center;font-size:12px;font-weight:800;color:#AFC4E8;white-space:nowrap}
+    .r-mark::before{content:"";display:block;width:2px;height:12px;margin:0 auto 6px;background:rgba(255,255,255,.35)}
+    .r-mark:first-child{transform:none;text-align:left}.r-mark:first-child::before{margin-left:0}
+    .r-mark:last-child{transform:translateX(-100%);text-align:right;color:var(--yellow)}.r-mark:last-child::before{margin-right:0}
+    .r-big{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-bottom:20px}
+    .r-card{position:relative;border-radius:var(--radius);padding:30px 24px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(6px);overflow:hidden;transition:transform .3s ease,border-color .3s ease}
+    .r-card::after{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:var(--accent,var(--teal))}
+    .r-card:hover{transform:translateY(-6px);border-color:rgba(255,255,255,.4)}
+    .r-num{display:block;font-family:var(--head);font-weight:900;line-height:1;letter-spacing:-.03em;color:#fff;font-size:clamp(48px,5.4vw,76px);margin-bottom:10px;font-variant-numeric:tabular-nums}
+    .r-num small{font-size:.42em;font-weight:800;color:#D7E4FF;margin-right:4px;letter-spacing:0}
+    .r-label{font-size:17px;color:#D7E4FF;line-height:1.35}
+    .r-small{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .r-small .r-card{padding:22px 20px}
+    .r-small .r-num{font-size:clamp(34px,3.4vw,46px);margin-bottom:6px}
+    .r-small .r-label{font-size:15px}
+    .r-ticker{margin:56px 0 18px;overflow:hidden;border-block:1px solid rgba(255,255,255,.16);padding:16px 0;mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
+    .r-ticker-row{display:flex;width:max-content;animation:rTicker 38s linear infinite}
+    .r-ticker-row span{font-family:var(--head);font-weight:900;font-size:22px;padding:0 26px;white-space:nowrap;color:#fff}
+    .r-ticker-row span:nth-child(5n+1)::before{content:"●";color:var(--red);margin-right:26px;font-size:12px;vertical-align:middle}
+    .r-ticker-row span:nth-child(5n+2)::before{content:"●";color:var(--orange);margin-right:26px;font-size:12px;vertical-align:middle}
+    .r-ticker-row span:nth-child(5n+3)::before{content:"●";color:var(--yellow);margin-right:26px;font-size:12px;vertical-align:middle}
+    .r-ticker-row span:nth-child(5n+4)::before{content:"●";color:var(--green);margin-right:26px;font-size:12px;vertical-align:middle}
+    .r-ticker-row span:nth-child(5n)::before{content:"●";color:var(--teal);margin-right:26px;font-size:12px;vertical-align:middle}
+    .r-edition{text-align:center;font-weight:900;letter-spacing:.14em;text-transform:uppercase;font-size:13px;color:#AFC4E8;margin:0 0 80px}
+    .r-thanks{text-align:center;max-width:860px;margin:0 auto 40px}
+    .r-thanks h3{font-family:var(--head);font-size:clamp(32px,4.4vw,52px);line-height:1.05;letter-spacing:-.02em;margin:0 0 16px;color:#fff}
+    .r-thanks p{font-size:19px;color:#D7E4FF;margin:0}
+    .r-gold{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-bottom:44px}
+    .r-logo{position:relative;display:flex;align-items:center;justify-content:center;min-height:190px;padding:34px 26px 28px;border-radius:var(--radius);background:#fff;border:3px solid var(--yellow);box-shadow:0 20px 50px rgba(0,0,0,.35),0 0 0 6px rgba(242,183,5,.12);transition:transform .3s ease,box-shadow .3s ease}
+    .r-logo:hover,.r-logo:focus-visible{transform:translateY(-8px) scale(1.02);box-shadow:0 28px 60px rgba(0,0,0,.45),0 0 0 8px rgba(242,183,5,.28);outline:none}
+    .r-logo img{max-width:100%;max-height:110px;object-fit:contain}
+    .r-logo .r-badge{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:linear-gradient(90deg,#F2B705,#F5821F);color:var(--navy);font-size:11px;font-weight:900;letter-spacing:.14em;text-transform:uppercase;padding:6px 14px;border-radius:999px;white-space:nowrap}
+    .r-claim{text-align:center;font-family:var(--head);font-weight:900;font-size:clamp(22px,2.6vw,32px);margin:0 0 30px;color:#fff}
+    .r-actions{display:flex;justify-content:center;flex-wrap:wrap;gap:14px}
+    @keyframes rPulse{0%{box-shadow:0 0 0 0 rgba(76,175,80,.7)}70%{box-shadow:0 0 0 12px rgba(76,175,80,0)}100%{box-shadow:0 0 0 0 rgba(76,175,80,0)}}
+    @keyframes rTicker{to{transform:translateX(-50%)}}
+    @media (max-width:1050px){.r-big,.r-small,.r-gold{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width:560px){.results{padding:80px 0}.r-big,.r-small,.r-gold{grid-template-columns:1fr}.r-mark{font-size:10px}.r-mark:nth-child(2),.r-mark:nth-child(4){display:none}}
+    @media (prefers-reduced-motion:reduce){.r-ticker-row,.r-status .r-dot{animation:none}.r-fill{transition:none}}
   </style>
 </head>
 <body>
@@ -216,8 +272,8 @@
       <a href="#ia">M365 + IA</a>
       <a href="#nonstop">100 sesiones</a>
       <a href="#equipo">Equipo</a>
-      <a class="btn btn-primary" href="https://microsoft365live2026.sessionize.com" target="_blank">EN VIVO</a>
-      <a class="btn btn-primary" href="https://microsoft365live26.eventbrite.co" target="_blank">Registro</a>
+      <a href="#resultados">Resultados</a>
+      <a class="btn btn-primary" href="https://www.youtube.com/watch?v=985qe1gB0kA&amp;list=PLK1ZgiWtWvhk" target="_blank" rel="noopener noreferrer">Grabaciones</a>
     </div>
   </nav>
 
@@ -225,12 +281,12 @@
     <div class="shell">
       <div class="hero-content reveal">
         <div class="brand-dots"><span class="c-red"></span><span class="c-orange"></span><span class="c-yellow"></span><span class="c-green"></span><span class="c-teal"></span></div>
-        <div class="eyebrow"><span class="live-dot"></span> Microsoft 365 + IA · del "4" al "8" de Nov · online y gratis</div>
+        <div class="eyebrow"><span class="live-dot"></span> Microsoft 365 + IA · del 4 al 8 de Nov 2026 · misión cumplida</div>
         <h1>Microsoft 365 Live <span>2026</span></h1>
-        <p class="lead">Este 4 de noviembre tendremos 100 sesiones non-stop, conectando comunidad, MVPs, speakers internacionales y experiencias prácticas alrededor de Microsoft 365 e Inteligencia Artificial.</p>
+        <p class="lead">Del 4 al 8 de noviembre vivimos 100 sesiones non-stop, conectando comunidad, MVPs, speakers internacionales y experiencias prácticas alrededor de Microsoft 365 e Inteligencia Artificial. ¡Gracias por hacerlo posible!</p>
         <div class="hero-actions">
-          <a class="btn btn-light" id="registro" href="https://microsoft365live2026.sessionize.com" target="_blank">EN VIVO</a>
-          <a class="btn btn-light" id="registro" href="https://microsoft365live26.eventbrite.co" target="_blank">Registro</a>
+          <a class="btn btn-light" href="https://www.youtube.com/watch?v=985qe1gB0kA&amp;list=PLK1ZgiWtWvhk" target="_blank" rel="noopener noreferrer">▶ Ver las grabaciones</a>
+          <a class="btn btn-light" href="#resultados">Resultados 2026</a>
           <a class="btn btn-outline" href="https://www.linkedin.com/company/microsoft365live/" target="_blank">Comunidad Oficial</a>
         </div>
         <div class="metrics">
@@ -242,6 +298,74 @@
       </div>
     </div>
   </header>
+
+  <!-- ===== RESULTADOS 2026: sección añadida tras el evento ===== -->
+  <section id="resultados" class="results" aria-labelledby="r-title">
+    <div class="shell">
+      <div class="r-head reveal">
+        <div class="r-status"><span class="r-dot"></span><span class="r-old">En vivo</span> Finalizado</div>
+        <h2 id="r-title">100 horas. 100 sesiones.<br><span class="r-grad">Misión cumplida.</span></h2>
+        <p>Del 4 al 8 de noviembre de 2026 vivimos la edición más grande de Microsoft 365 Live.</p>
+      </div>
+
+      <div class="r-progress reveal" id="r-progress" aria-hidden="true">
+        <div class="r-track"><div class="r-fill"></div></div>
+        <div class="r-marks">
+          <span class="r-mark" style="left:0">Sesión 1</span>
+          <span class="r-mark" style="left:25%">25</span>
+          <span class="r-mark" style="left:50%">50</span>
+          <span class="r-mark" style="left:80%">80</span>
+          <span class="r-mark" style="left:100%">100 ✔</span>
+        </div>
+      </div>
+
+      <div class="r-big">
+        <div class="r-card reveal" style="--accent:var(--red)"><span class="r-num" data-r-count="2000" data-r-prefix="+">0</span><span class="r-label">horas de conocimiento vistas en directo</span></div>
+        <div class="r-card reveal" style="--accent:var(--orange)"><span class="r-num" data-r-count="100">0</span><span class="r-label">horas ininterrumpidas en vivo</span></div>
+        <div class="r-card reveal" style="--accent:var(--yellow)"><span class="r-num" data-r-count="100">0</span><span class="r-label">sesiones</span></div>
+        <div class="r-card reveal" style="--accent:var(--green)"><span class="r-num" data-r-count="37">0</span><span class="r-label">países y territorios conectados</span></div>
+      </div>
+
+      <div class="r-small">
+        <div class="r-card reveal" style="--accent:var(--teal)"><span class="r-num" data-r-count="270" data-r-prefix="+">0</span><span class="r-label">organizaciones presentes en el directo</span></div>
+        <div class="r-card reveal" style="--accent:var(--red)"><span class="r-num" data-r-count="260" data-r-prefix="+">0</span><span class="r-label">ciudades</span></div>
+        <div class="r-card reveal" style="--accent:var(--orange)"><span class="r-num" data-r-count="1400" data-r-prefix="+">0</span><span class="r-label">reacciones en directo 👏</span></div>
+        <div class="r-card reveal" style="--accent:var(--yellow)"><span class="r-num"><small>casi</small><span data-r-count="4">0</span> h</span><span class="r-label">de conexión media por persona</span></div>
+        <div class="r-card reveal" style="--accent:var(--green)"><span class="r-num" data-r-count="160">0</span><span class="r-label">propuestas de sesión recibidas</span></div>
+        <div class="r-card reveal" style="--accent:var(--teal)"><span class="r-num" data-r-count="3500" data-r-prefix="+">0</span><span class="r-label">visitas a la página del evento</span></div>
+        <div class="r-card reveal" style="--accent:var(--red)"><span class="r-num" data-r-count="5">0</span><span class="r-label">días de transmisión</span></div>
+        <div class="r-card reveal" style="--accent:var(--orange)"><span class="r-num" data-r-count="2">0</span><span class="r-label">idiomas: español e inglés</span></div>
+      </div>
+
+      <div class="r-ticker" aria-label="Temas del evento">
+        <div class="r-ticker-row">
+          <span>Copilot</span><span>Agentes</span><span>Copilot Studio</span><span>Power Platform</span><span>Fabric</span><span>SharePoint</span><span>Teams</span><span>Seguridad</span><span>Purview</span><span>Defender</span><span>IA</span><span>Copilot</span><span>Agentes</span><span>Copilot Studio</span><span>Power Platform</span><span>Fabric</span><span>SharePoint</span><span>Teams</span><span>Seguridad</span><span>Purview</span><span>Defender</span><span>IA</span>
+        </div>
+      </div>
+      <p class="r-edition reveal">5.ª edición · 6 años de comunidad (2020–2026)</p>
+
+      <div class="r-thanks reveal">
+        <div class="brand-dots" style="justify-content:center"><span class="c-red"></span><span class="c-orange"></span><span class="c-yellow"></span><span class="c-green"></span><span class="c-teal"></span></div>
+        <h3>Gracias a quienes lo hicieron posible</h3>
+        <p>Sin el apoyo de nuestros patrocinadores Gold, esta quinta edición, los premios para la comunidad y estas 100 horas no habrían sido posibles.</p>
+      </div>
+
+      <div class="r-gold">
+        <a class="r-logo reveal" href="https://es.tdsynnex.com/" target="_blank" rel="noopener noreferrer" aria-label="Visitar la web de TD SYNNEX"><span class="r-badge">Patrocinador Gold</span><img src="https://raw.githubusercontent.com/Microsoft365Live/26/main/Pics/TD%20SYNNEX_Logo_Color_web.jpg" alt="TD SYNNEX" loading="lazy"></a>
+        <a class="r-logo reveal" href="https://www.v-valley.com/es/" target="_blank" rel="noopener noreferrer" aria-label="Visitar la web de V-Valley"><span class="r-badge">Patrocinador Gold</span><img src="https://raw.githubusercontent.com/Microsoft365Live/26/main/Pics/V-Valley_LOGO.png" alt="V-Valley" loading="lazy"></a>
+        <a class="r-logo reveal" href="http://www.cmconsulting.com.co/" target="_blank" rel="noopener noreferrer" aria-label="Visitar la web de CM Consulting"><span class="r-badge">Patrocinador Gold</span><img src="https://raw.githubusercontent.com/Microsoft365Live/26/main/Pics/CM_Consulting_logo_horizontal.png" alt="CM Consulting" loading="lazy"></a>
+        <a class="r-logo reveal" href="https://www.arrow.com/globalecs/es/" target="_blank" rel="noopener noreferrer" aria-label="Visitar la web de Arrow"><span class="r-badge">Patrocinador Gold</span><img src="https://raw.githubusercontent.com/Microsoft365Live/26/main/Pics/500x500_arrow_negro.png" alt="Arrow" loading="lazy"></a>
+      </div>
+
+      <p class="r-claim reveal">100 sesiones. 100 horas. Una sola comunidad. 💙</p>
+      <div class="r-actions reveal">
+        <a class="btn btn-light" href="https://www.youtube.com/watch?v=985qe1gB0kA&amp;list=PLK1ZgiWtWvhk" target="_blank" rel="noopener noreferrer">▶ Ver las grabaciones</a>
+        <a class="btn btn-outline" href="https://www.linkedin.com/company/microsoft365live/" target="_blank" rel="noopener noreferrer">Síguenos en LinkedIn</a>
+      </div>
+    </div>
+  </section>
+  <!-- ===== FIN RESULTADOS 2026 ===== -->
+
 
   <section id="historia" class="story">
     <div class="shell">
@@ -347,7 +471,7 @@
         <div class="brand-dots" style="justify-content:center"><span class="c-red"></span><span class="c-orange"></span><span class="c-yellow"></span><span class="c-green"></span><span class="c-teal"></span></div>
         <h2>100 sesiones. 1 comunidad. Microsoft 365 + IA.</h2>
         <p>Microsoft 365 está viviendo uno de los momentos más transformadores de su historia gracias a la Inteligencia Artificial. Por eso, el gran foco de Microsoft 365 Live 2026 es Microsoft 365 + IA.</p>
-        <a class="btn btn-primary" href="https://microsoft365live26.eventbrite.co" target="_blank">Quiero participar</a>
+        <a class="btn btn-primary" href="https://www.youtube.com/watch?v=985qe1gB0kA&amp;list=PLK1ZgiWtWvhk" target="_blank" rel="noopener noreferrer">▶ Ver las grabaciones</a>
       </div>
     </div>
   </section>
@@ -359,69 +483,40 @@
     <div class="shell">
       <div class="sponsors-head reveal">
         <div class="brand-dots" style="justify-content:center"><span class="c-red"></span><span class="c-orange"></span><span class="c-yellow"></span><span class="c-green"></span><span class="c-teal"></span></div>
-        <div class="kicker">Empresas que hacen posible el evento</div>
+        <div class="kicker">Empresas que hicieron posible el evento</div>
         <h2>Patrocinadores oficiales</h2>
-        <p>Gracias a las empresas que apoyan Microsoft 365 Live 2026 y nos ayudan a mantener esta experiencia online y gratuita para la comunidad.</p>
+        <p>Gracias a las empresas que apoyaron Microsoft 365 Live 2026 y nos ayudaron a mantener esta experiencia online y gratuita para la comunidad.</p>
       </div>
 
       <!-- NIVEL ORO: una columna y mayor protagonismo visual -->
       <div class="sponsor-tier reveal">
-        <h3 class="sponsor-tier-title gold">Patrocinadores ORO</h3>
+        <h3 class="sponsor-tier-title gold">Patrocinadores Gold</h3>
         <div class="sponsors-gold-grid">
           <a class="sponsor-card gold-card" href="https://es.tdsynnex.com/" target="_blank" rel="noopener noreferrer" aria-label="Visitar la web de TD SYNNEX">
-            <span class="sponsor-level">Patrocinador ORO</span>
+            <span class="sponsor-level">Patrocinador Gold</span>
             <img src="https://raw.githubusercontent.com/Microsoft365Live/26/main/Pics/TD%20SYNNEX_Logo_Color_web.jpg" alt="Logo de TD SYNNEX" loading="lazy">
           </a>
           <a class="sponsor-card gold-card" href="https://www.v-valley.com/es/" target="_blank" rel="noopener noreferrer" aria-label="Visitar la web de V-Valley">
-            <span class="sponsor-level">Patrocinador ORO</span>
+            <span class="sponsor-level">Patrocinador Gold</span>
             <img src="https://raw.githubusercontent.com/Microsoft365Live/26/main/Pics/V-Valley_LOGO.png" alt="Logo de V-Valley" loading="lazy">
           </a>
           <a class="sponsor-card gold-card" href="http://www.cmconsulting.com.co/" target="_blank" rel="noopener noreferrer" aria-label="Visitar la web de CM Consulting">
-            <span class="sponsor-level">Patrocinador ORO</span>
+            <span class="sponsor-level">Patrocinador Gold</span>
             <img src="https://raw.githubusercontent.com/Microsoft365Live/26/main/Pics/CM_Consulting_logo_horizontal.png" alt="Logo de CM Consulting" loading="lazy">
           </a>
            <a class="sponsor-card gold-card" href="https://www.arrow.com/globalecs/es/" target="_blank" rel="noopener noreferrer" aria-label="Visitar la web de Arrow">
-            <span class="sponsor-level">Patrocinador ORO</span>
+            <span class="sponsor-level">Patrocinador Gold</span>
             <img src="https://raw.githubusercontent.com/Microsoft365Live/26/main/Pics/500x500_arrow_negro.png" alt="Logo de Arrow" loading="lazy">
-          </a>
-          <a class="sponsor-card gold-card" href="https://microsoft365live26.eventbrite.co/" target="_blank" rel="noopener noreferrer" aria-label="Visitar la web de NOMBRE PATROCINADOR ORO">
-            <span class="sponsor-level">Patrocinador ORO</span>
-            <img src="https://raw.githubusercontent.com/Microsoft365Live/26/main/Pics/Como%20aqui%20va%20tu%20logo.png" alt="Logo de NOMBRE PATROCINADOR ORO" loading="lazy">
           </a>
           <!-- DUPLICA ESTE BLOQUE PARA AGREGAR MÁS PATROCINADORES ORO
           <a class="sponsor-card gold-card" href="URL_WEB_PATROCINADOR_ORO" target="_blank" rel="noopener noreferrer" aria-label="Visitar la web de NOMBRE PATROCINADOR ORO">
-            <span class="sponsor-level">Patrocinador ORO</span>
+            <span class="sponsor-level">Patrocinador Gold</span>
             <img src="logo-patrocinador-oro.png" alt="Logo de NOMBRE PATROCINADOR ORO" loading="lazy">
           </a>
           -->
         </div>
       </div>
 
-      <!-- NIVEL PLATA: dos columnas -->
-      <div class="sponsor-tier reveal">
-        <h3 class="sponsor-tier-title silver">Patrocinadores PLATA</h3>
-        <div class="sponsors-silver-grid">
-          <!-- REEMPLAZA URL, NOMBRE Y ARCHIVO DEL LOGO -->
-          <a class="sponsor-card silver-card" href="https://microsoft365live26.eventbrite.co/" target="_blank" rel="noopener noreferrer" aria-label="Visitar la web de PATROCINADOR PLATA 1">
-            <span class="sponsor-level">Patrocinador PLATA</span>
-            <img src="https://raw.githubusercontent.com/Microsoft365Live/26/main/Pics/Como%20aqui%20va%20tu%20logo.png" alt="Logo de PATROCINADOR PLATA 1" loading="lazy">
-          </a>
-
-          <!-- REEMPLAZA URL, NOMBRE Y ARCHIVO DEL LOGO -->
-          <a class="sponsor-card silver-card" href="https://microsoft365live26.eventbrite.co/" target="_blank" rel="noopener noreferrer" aria-label="Visitar la web de PATROCINADOR PLATA 2">
-            <span class="sponsor-level">Patrocinador PLATA</span>
-            <img src="https://raw.githubusercontent.com/Microsoft365Live/26/main/Pics/Como%20aqui%20va%20tu%20logo.png" alt="Logo de PATROCINADOR PLATA 2" loading="lazy">
-          </a>
-
-          <!-- DUPLICA CUALQUIERA DE LOS DOS BLOQUES ANTERIORES PARA MÁS PATROCINADORES PLATA -->
-        </div>
-      </div>
-
-      <!-- CALL FOR SPONSORS: sustituye URL_CALL_FOR_SPONSORS por la URL del documento -->
-      <div class="sponsors-cta reveal">
-        <p>¿Quieres que tu empresa forme parte de Microsoft 365 Live 2026?</p>
-        <a class="btn btn-primary" href="https://raw.githubusercontent.com/Microsoft365Live/26/main/docs/M365-Live-2026-Patrocinadores.pdf" target="_blank" rel="noopener noreferrer">Call for Sponsors</a>
-      </div>
     </div>
   </section>
 
@@ -457,6 +552,36 @@
       });
     }, {threshold:.8});
     counters.forEach(c=>counterObserver.observe(c));
+  </script>
+  <script>
+    /* RESULTADOS 2026: contadores y barra de progreso */
+    (function(){
+      var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var fmt = function(n){ return String(n).replace(/\B(?=(\d{3})+(?!\d))/g,'.'); };
+      var els = document.querySelectorAll('[data-r-count]');
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(e){
+          if(!e.isIntersecting) return;
+          var el = e.target, target = Number(el.getAttribute('data-r-count')) || 0, pre = el.getAttribute('data-r-prefix') || '';
+          io.unobserve(el);
+          if(reduce){ el.textContent = pre + fmt(target); return; }
+          var start = performance.now(), dur = 1800;
+          (function tick(now){
+            var p = Math.min(1,(now-start)/dur), v = Math.round(target*(1-Math.pow(1-p,3)));
+            el.textContent = pre + fmt(v);
+            if(p<1) requestAnimationFrame(tick);
+          })(start);
+        });
+      },{threshold:.6});
+      els.forEach(function(el){ io.observe(el); });
+      var bar = document.getElementById('r-progress');
+      if(bar){
+        var bo = new IntersectionObserver(function(entries){
+          if(entries[0].isIntersecting){ bar.classList.add('go'); bo.disconnect(); }
+        },{threshold:.5});
+        bo.observe(bar);
+      }
+    })();
   </script>
 </body>
 </html>
